@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
+    <title>Citations Panafricaines</title>
   </head>
   <body>
-    <h1>Liste des tâches</h1>
-    <div class="container">
-      <div class="inputContainer">
-        <input type="text" placeholder="La tâche du jour :" id="inputTask" />
-        <button id="addTask">+</button>
-      </div>
-      <div id="taskContainer"></div>
-    </div>
-
+    <h1>Citations panafricaines aléatoire :</h1>
+    <section>
+      <div class="quotesGenerator"></div>
+      <button id="quotesButton">Clique sur moi</button>
+    </section>
+    <footer>
+      <span>MadagasCode © 2024 </span>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

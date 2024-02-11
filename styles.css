@@ -1,96 +1,180 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
-  background-color: rgba(250, 128, 114, 0.472);
+  background-image: url(./assets/FondAfrique2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 h1 {
   text-align: center;
+}
+
+.quoteParagraph {
+  text-align: center;
   margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
-.container {
-  position: relative;
-  max-width: 430px;
-  width: 100%;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 85px auto 0;
-  background-color: white;
-  box-shadow: 0 5px 10px 0px black;
+.quoteDiv {
   display: flex;
   flex-direction: column;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 800px;
 }
 
-.container input {
-  position: relative;
-  border: 2px solid rgb(136, 173, 221);
+.quoteImage {
+  margin: auto;
+  width: 400px;
+  height: 400px;
   border-radius: 10px;
-  height: 50px;
-  width: 88%;
-  font-size: 18px;
+}
+
+.quoteAuteur {
+  font-style: italic;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.699);
   font-weight: 600;
-  padding: 5px;
 }
 
-.container input:focus {
-  border: 4px solid rgb(47, 121, 219);
-}
-
-.container button {
-  width: 10%;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(205, 191, 170);
-}
-
-.container button:hover {
-  background-color: rgb(202, 157, 90);
-}
-
-#taskContainer {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-}
-.taskGroup {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.taskGroup p {
-  width: 80%;
-  height: 40px;
-  border-radius: 10px;
-  margin: 0;
-  border: 2px solid rgb(0, 100, 239);
-  background-color: rgb(0, 100, 239);
+#quotesButton {
+  margin-top: 20px;
+  background: none;
+  width: 300px;
+  height: 70px;
+  font-size: 1.5rem;
   color: white;
-  font-size: 18px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10px;
+  border: 4px solid rgba(255, 221, 69, 0.892);
 }
 
-.taskGroup button {
-  background-color: rgba(255, 242, 0, 0.267);
-  width: 10%;
-  margin-left: 5px;
+#quotesButton:hover {
+  background-color: rgba(241, 186, 19, 0.796);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
 }
 
-.taskGroup button:hover {
-  background-color: rgb(250, 237, 0);
+.quoteParagraph-exit {
+  animation: exitParagraph 0.5s ease-out;
 }
-input.taskCheckbox {
-  width: 30px;
-  margin-right: 5px;
+
+.quoteParagraph-enter {
+  animation: enterParagraph 0.5s ease-in;
+}
+
+@keyframes exitParagraph {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes enterParagraph {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.quoteAuteur-exit {
+  animation: slideOutAuteur 0.5s forwards;
+}
+
+.quoteAuteur-enter {
+  animation: slideInAuteur 0.5s forwards;
+}
+
+@keyframes slideOutAuteur {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInAuteur {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.quoteImage-exit {
+  animation: slideOut 0.5s forwards;
+}
+
+.quoteImage-enter {
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+}
+footer span {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #quotesButton {
+    position: absolute;
+    bottom: 80px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .quoteParagraph {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.4rem;
+  }
 }
