@@ -14,7 +14,7 @@ const quotes = [
       "https://upload.wikimedia.org/wikipedia/commons/3/3c/PatriceLumumba1960.jpg",
   },
   {
-    auteur: "Cheik Anta Diop",
+    auteur: "Cheikh Anta Diop",
     citation:
       "La facilité avec laquelle nous renonçons, souvent, à notre culture ne s’explique que par notre ignorance de celle-ci, et non par une attitude progressiste adoptée en connaissance de cause.",
     photoAuteur:
@@ -56,7 +56,7 @@ const quotes = [
   {
     auteur: "Winnie Mandela",
     citation:
-      "Ce n’est que lorsque tous les peuples noirs s’uniront et parleront d’une seule voix que nous serons une force de négociation qui décidera de son propre destin.",
+      "Ce n’est qu'en unissant tous les peuples noirs et en parlant d’une seule voix que nous serons une force de négociation décidant de notre propre destin.",
     photoAuteur:
       "https://news.mandela.ac.za/getmedia/fa895b90-4fd8-4acd-a1d3-6f40500312ff/Winnie-Madikizela-Mandela?width=400&height=500",
   },
@@ -70,7 +70,7 @@ const quotes = [
   {
     auteur: "Thomas Sankara",
     citation:
-      "Il ne peut pas y avoir de bonheur sans liberté, ni de liberté sans courage.",
+      "Il ne peut y avoir de bonheur sans liberté, ni de liberté sans courage.",
     photoAuteur:
       "https://focus.telerama.fr/2022/07/06/0/0/620/918/1200/0/60/0/e280d32_1657098645685-gamma-ga522738-007.jpg",
   },
@@ -109,6 +109,7 @@ const quotes = [
     photoAuteur: "https://www.babelio.com/users/AVT_Assata-Shakur_1571.jpg",
   },
 ];
+
 const button = document.querySelector("#quotesButton");
 const quotesSection = document.querySelector(".quotesGenerator");
 
