@@ -1,13 +1,18 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   background-image: url(./assets/FondAfrique2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   color: white;
   font-family: "Ubuntu", sans-serif;
 }
-
+main {
+  flex: 1;
+}
 section {
   display: flex;
   justify-content: center;
@@ -157,8 +162,8 @@ h1 {
 }
 
 footer {
-  position: absolute;
-  bottom: 20px;
+  text-align: center;
+  padding: 10px;
 }
 footer span {
   text-align: center;
