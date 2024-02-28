@@ -61,6 +61,7 @@ h1 {
 }
 
 #quotesButton {
+  border-radius: 15px;
   margin-top: 20px;
   background: none;
   width: 300px;
@@ -72,7 +73,7 @@ h1 {
 
 #quotesButton:hover {
   background-color: rgba(241, 186, 19, 0.796);
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   cursor: pointer;
 }
@@ -170,6 +171,7 @@ h1 {
 footer {
   text-align: center;
   padding: 10px;
+  margin-bottom: 10px;
 }
 footer span {
   text-align: center;
